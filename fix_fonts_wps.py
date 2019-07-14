@@ -29,5 +29,5 @@ def unzip():
 
 url_fonts()
 unzip()
-
+print('Done!')
 
