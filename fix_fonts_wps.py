@@ -3,11 +3,13 @@
 import urllib.request
 import os
 import zipfile
-
 URL = 'https://www.dropbox.com/s/yglkconvmhhel5y/wps_symbol_fonts.zip?dl=1'
 downloaded_fonts = os.getenv("HOME") + '/f.zip'
+
 if not os.path.exists(os.getenv("HOME") + '/.fonts'):
     os.makedirs(os.getenv("HOME") + '/.fonts')
+if not os.path.exists(os.getenv("HOME") + '/.local/share/fonts'):
+    os.makedirs(os.getenv("HOME") + '/.local/share/fonts')
 
 
 def url_fonts():
@@ -20,6 +22,7 @@ def url_fonts():
 def unzip():
     zip_ref = zipfile.ZipFile(downloaded_fonts, 'r')
     zip_ref.extractall(os.getenv("HOME") + '/.fonts')
+    zip_ref.extractall(os.getenv("HOME") +  '/.local/share/fonts')
     zip_ref.close()
     os.remove(downloaded_fonts)
 
