@@ -3,7 +3,7 @@
 import urllib.request
 import os
 import zipfile
-URL = 'https://www.dropbox.com/s/yglkconvmhhel5y/wps_symbol_fonts.zip?dl=1'
+URL = 'https://github.com/muharemovic/fix_fonts_wps/blob/master/wps_symbol_fonts.zip'
 downloaded_fonts = os.getenv("HOME") + '/f.zip'
 
 if not os.path.exists(os.getenv("HOME") + '/.fonts'):
