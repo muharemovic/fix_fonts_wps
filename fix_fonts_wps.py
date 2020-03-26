@@ -4,7 +4,7 @@ import urllib.request
 import os
 import zipfile
 URL = 'https://raw.githubusercontent.com/muharemovic/fix_fonts_wps/master/wps_symbol_fonts.zip'
-downloaded_fonts = os.getenv("HOME") + '/f.zip'
+downloaded_fonts = os.getenv("HOME") + '/wps_symbol_fonts.zip'
 
 if not os.path.exists(os.getenv("HOME") + '/.fonts'):
     os.makedirs(os.getenv("HOME") + '/.fonts')
